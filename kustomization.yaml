@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- https://github.com/nandinisingh759/argo-in-app-monitoring/config/manager
+- https://github.com/nandinisingh759/argo-in-app-monitoring/config/crd
+- https://github.com/nandinisingh759/argo-in-app-monitoring/config/rbac
+images:
+- name: controller
+  newName: nandinisingh357/argo-monitoring
